@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --bg0: #070606;
+  --bg1: #0b0a0a;
+  --glass: rgba(255, 255, 255, 0.06);
+  --stroke: rgba(255, 255, 255, 0.12);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.7);
+  --accent: #e2b35c; /* warm gold */
+  --accent2: #65fbd2; /* subtle tech mint */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(900px 600px at 15% 10%, rgba(226, 179, 92, 0.14), transparent 55%),
+    radial-gradient(900px 600px at 85% 15%, rgba(101, 251, 210, 0.10), transparent 55%),
+    radial-gradient(1200px 900px at 50% 110%, rgba(255, 255, 255, 0.05), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(101, 251, 210, 0.25);
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(14px);
+}
+
+.neon-ring {
+  box-shadow:
+    0 0 0 1px rgba(226, 179, 92, 0.12),
+    0 0 34px rgba(226, 179, 92, 0.10),
+    0 0 70px rgba(101, 251, 210, 0.06);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: -0.02em;
+}
+
+.text-accent {
+  color: var(--accent);
+}
