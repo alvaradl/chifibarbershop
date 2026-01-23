@@ -42,12 +42,12 @@ export const siteData = {
     { name: "Kids Haircut", note: "Call for pricing" },
   ],
   gallery: [
-    { src: "/gallery/IMG_4979.jpg", alt: "Haircut example 1" },
-    { src: "/gallery/IMG_4980.jpg", alt: "Haircut example 2" },
-    { src: "/gallery/IMG_4981.jpg", alt: "Haircut example 3" },
-    { src: "/gallery/IMG_4982.jpg", alt: "Haircut example 4" },
-    { src: "/gallery/IMG_4983.jpg", alt: "Haircut example 5" },
-    { src: "/gallery/IMG_4986.jpg", alt: "Haircut example 6" },
+    { src: "/cut1.png", alt: "Haircut example 1" },
+    { src: "/IMG_4980.png", alt: "Haircut example 2" },
+    { src: "/IMG_4981.png", alt: "Haircut example 3" },
+    { src: "/IMG_4982.png", alt: "Haircut example 4" },
+    { src: "/IMG_4983.png", alt: "Haircut example 5" },
+    { src: "/IMG_4986.png", alt: "Haircut example 6" },
   ],
 } as const
 
