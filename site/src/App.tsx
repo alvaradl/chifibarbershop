@@ -185,7 +185,7 @@ function Header({
               ))}
               <a
                 href={`tel:${siteData.phoneTel}`}
-                className="ml-1 inline-flex items-center gap-2 rounded-xl bg-[#65fbd2]/15 px-3 py-2 text-sm font-semibold text-white ring-1 ring-[#65fbd2]/30 transition hover:bg-[#65fbd2]/20 focus:outline-none focus:ring-2 focus:ring-[#65fbd2]/70"
+                className="ml-1 inline-flex items-center gap-2 rounded-xl bg-[#e2b35c]/18 px-3 py-2 text-sm font-semibold text-white ring-1 ring-[#e2b35c]/35 transition hover:bg-[#e2b35c]/22 focus:outline-none focus:ring-2 focus:ring-[#e2b35c]/70"
                 aria-label={`Book appointment by calling ${siteData.phoneDisplay}`}
               >
                 Book (Call)
@@ -230,7 +230,7 @@ function Header({
               ))}
               <a
                 href={`tel:${siteData.phoneTel}`}
-                className="mt-1 rounded-xl bg-[#65fbd2]/15 px-3 py-2 text-sm font-semibold ring-1 ring-[#65fbd2]/30 hover:bg-[#65fbd2]/20"
+                className="mt-1 rounded-xl bg-[#e2b35c]/18 px-3 py-2 text-sm font-semibold ring-1 ring-[#e2b35c]/35 hover:bg-[#e2b35c]/22"
               >
                 Book Appointment (Call) — {siteData.phoneDisplay}
               </a>
@@ -269,56 +269,72 @@ function Section({
 }
 
 function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }) {
+  const heroImg = siteData.gallery[0]?.src
   return (
     <section id="home" className="scroll-mt-28 pb-10 pt-2 sm:pb-14">
-      <div className="glass neon-ring relative overflow-hidden rounded-3xl px-6 py-10 sm:px-10 sm:py-14">
-        <div
-          className={cx(
-            'pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl',
-            prefersReducedMotion ? 'opacity-60' : 'animate-pulse',
-          )}
-          style={{
-            background:
-              'radial-gradient(circle at 30% 30%, rgba(101,251,210,0.35), transparent 55%)',
-          }}
-        />
-        <div
-          className={cx(
-            'pointer-events-none absolute -bottom-28 -left-24 h-80 w-80 rounded-full blur-3xl',
-            prefersReducedMotion ? 'opacity-50' : 'animate-pulse',
-          )}
-          style={{
-            background:
-              'radial-gradient(circle at 30% 30%, rgba(122,167,255,0.30), transparent 55%)',
-            animationDelay: '450ms',
-          }}
-        />
+      <div className="glass neon-ring relative overflow-hidden rounded-3xl">
+        <div className="absolute inset-0">
+          {heroImg ? (
+            <img
+              src={heroImg}
+              alt=""
+              className="h-full w-full object-cover opacity-30"
+              aria-hidden="true"
+            />
+          ) : null}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/65 to-black/85" />
+        </div>
 
-        <div className="relative grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+        <div className="relative px-6 py-10 sm:px-10 sm:py-14">
+          <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+            <div
+              className={cx(
+                'pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl',
+                prefersReducedMotion ? 'opacity-60' : 'animate-pulse',
+              )}
+              style={{
+                background:
+                  'radial-gradient(circle at 30% 30%, rgba(226,179,92,0.28), transparent 55%)',
+              }}
+            />
+            <div
+              className={cx(
+                'pointer-events-none absolute -bottom-28 -left-24 h-80 w-80 rounded-full blur-3xl',
+                prefersReducedMotion ? 'opacity-50' : 'animate-pulse',
+              )}
+              style={{
+                background:
+                  'radial-gradient(circle at 30% 30%, rgba(101,251,210,0.22), transparent 55%)',
+                animationDelay: '450ms',
+              }}
+            />
+          </div>
+
+          <div className="relative z-10 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-white/80 ring-1 ring-white/10">
-              Minneapolis • NE Columbia Ave
-              <span className="h-1 w-1 rounded-full bg-white/30" />
-              Walk-ins welcome
+            <div className="inline-flex items-center gap-2 rounded-full bg-black/35 px-3 py-1 text-[11px] font-semibold tracking-[0.22em] text-white/80 ring-1 ring-white/10">
+              {siteData.hero.eyebrow}
+              <span className="h-1 w-1 rounded-full bg-white/35" />
+              Minneapolis
             </div>
-            <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-              {siteData.name}
+            <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-6xl">
+              <span className="block">{siteData.hero.headlineTop}</span>
+              <span className="block text-accent">{siteData.hero.headlineBottom}</span>
             </h1>
-            <p className="mt-4 max-w-2xl text-base text-muted sm:text-lg">
-              A modern barbershop experience — sharp fades, crisp line-ups, and
-              clean beard work. Book by phone for fast scheduling.
+            <p className="mt-4 max-w-2xl text-base text-white/80 sm:text-lg">
+              {siteData.hero.subhead}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={`tel:${siteData.phoneTel}`}
-                className="inline-flex items-center justify-center rounded-2xl bg-[#65fbd2]/18 px-5 py-3 text-sm font-semibold ring-1 ring-[#65fbd2]/35 transition hover:bg-[#65fbd2]/22 focus:outline-none focus:ring-2 focus:ring-[#65fbd2]/70"
+                className="inline-flex items-center justify-center rounded-2xl bg-[#e2b35c]/18 px-5 py-3 text-sm font-semibold ring-1 ring-[#e2b35c]/35 transition hover:bg-[#e2b35c]/22 focus:outline-none focus:ring-2 focus:ring-[#e2b35c]/70"
               >
-                Book Appointment (Call) — {siteData.phoneDisplay}
+                Book Now (Call) — {siteData.phoneDisplay}
               </a>
               <button
                 type="button"
                 onClick={() => scrollToId('gallery', prefersReducedMotion)}
-                className="inline-flex items-center justify-center rounded-2xl bg-white/6 px-5 py-3 text-sm font-semibold ring-1 ring-white/12 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#7aa7ff]/70"
+                className="inline-flex items-center justify-center rounded-2xl bg-white/8 px-5 py-3 text-sm font-semibold ring-1 ring-white/12 transition hover:bg-white/12 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 View Gallery
               </button>
@@ -362,6 +378,21 @@ function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }) {
                 ))}
               </div>
             </div>
+
+            <div className="glass rounded-2xl p-5">
+              <div className="text-xs font-semibold tracking-[0.22em] text-white/70">
+                SHOP INFO
+              </div>
+              <div className="mt-3 grid gap-3">
+                {siteData.shopHighlights.slice(0, 3).map((x) => (
+                  <div key={x.title} className="rounded-2xl bg-black/20 p-4 ring-1 ring-white/10">
+                    <div className="text-sm font-semibold">{x.title}</div>
+                    <div className="mt-1 text-sm text-muted">{x.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -402,33 +433,48 @@ function Feature({ title, desc }: { title: string; desc: string }) {
 
 function Services() {
   return (
-    <Section id="services" eyebrow="SERVICES" title="What we do">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {siteData.services.map((s) => (
-          <div
-            key={s.title}
-            className="glass rounded-2xl p-5 transition hover:bg-white/8"
-          >
-            <div className="flex items-center justify-between">
-              <div className="text-base font-semibold">{s.title}</div>
-              <div className="h-2 w-2 rounded-full bg-[#65fbd2]/80 shadow-[0_0_16px_rgba(101,251,210,0.35)]" />
+    <Section id="services" eyebrow="SERVICES" title="Barber services">
+      <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
+        <div className="grid gap-4 sm:grid-cols-2">
+          {siteData.services.map((s) => (
+            <div
+              key={s.title}
+              className="glass rounded-2xl p-5 transition hover:bg-white/8"
+            >
+              <div className="flex items-center justify-between">
+                <div className="text-base font-semibold">{s.title}</div>
+                <div className="h-2 w-2 rounded-full bg-[#e2b35c]/85 shadow-[0_0_16px_rgba(226,179,92,0.25)]" />
+              </div>
+              <p className="mt-2 text-sm text-muted">{s.desc}</p>
             </div>
-            <p className="mt-2 text-sm text-muted">{s.desc}</p>
+          ))}
+        </div>
+
+        <div className="glass neon-ring rounded-2xl p-6">
+          <div className="text-xs font-semibold tracking-[0.22em] text-white/70">
+            SERVICES / PRICING
           </div>
-        ))}
-      </div>
-      <div className="mt-6 glass rounded-2xl p-5">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <div className="text-sm font-semibold">Ready to book?</div>
-            <div className="text-sm text-muted">Call to schedule your appointment.</div>
+          <div className="mt-4 divide-y divide-white/10">
+            {siteData.serviceMenu.map((item) => (
+              <div key={item.name} className="flex items-center justify-between gap-4 py-3">
+                <div className="text-sm font-semibold">{item.name}</div>
+                <div className="text-sm text-white/75">{item.note}</div>
+              </div>
+            ))}
           </div>
-          <a
-            href={`tel:${siteData.phoneTel}`}
-            className="inline-flex items-center justify-center rounded-2xl bg-[#65fbd2]/18 px-5 py-3 text-sm font-semibold ring-1 ring-[#65fbd2]/35 hover:bg-[#65fbd2]/22"
-          >
-            Call {siteData.phoneDisplay}
-          </a>
+
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <div className="text-sm font-semibold">Book an appointment</div>
+              <div className="text-sm text-muted">Call and we’ll get you scheduled.</div>
+            </div>
+            <a
+              href={`tel:${siteData.phoneTel}`}
+              className="inline-flex items-center justify-center rounded-2xl bg-[#e2b35c]/18 px-5 py-3 text-sm font-semibold ring-1 ring-[#e2b35c]/35 hover:bg-[#e2b35c]/22"
+            >
+              Call {siteData.phoneDisplay}
+            </a>
+          </div>
         </div>
       </div>
     </Section>
