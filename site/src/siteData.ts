@@ -1,5 +1,5 @@
 export const siteData = {
-  name: "Chifi's Barbershop",
+  name: "Chify's Barbershop",
   tagline: "Fresh cuts. Clean lines. Modern barbering.",
   phoneDisplay: "(612) 735-8435",
   phoneTel: "+16127358435",
@@ -11,7 +11,7 @@ export const siteData = {
     "https://www.google.com/maps/search/?api=1&query=3055%20NE%20Columbia%20Ave%2C%20Minneapolis%2C%20MN%2055418",
   hero: {
     eyebrow: "BARBER SHOP",
-    headlineTop: "Chifi’s",
+    headlineTop: "Chify's",
     headlineBottom: "Barbershop",
     subhead:
       "Sharp fades, clean line-ups, and beard work done right. Call to book fast or walk in when available.",
