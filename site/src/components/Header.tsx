@@ -47,10 +47,13 @@ export function Header({
               className="group flex items-center gap-2 rounded-xl px-2 py-1 text-left focus:outline-none focus:ring-2 focus:ring-[#FF8C42]/70"
               aria-label={`${siteData.name} — go to top`}
             >
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 ring-1 ring-blue-200">
-                <span className="text-base font-semibold tracking-tight text-[#FF8C42]">
-                  C
-                </span>
+              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-blue-50 p-1 ring-1 ring-blue-200">
+                <img
+                  src="/barber-pole-logo.png"
+                  alt=""
+                  className="h-full w-full object-contain"
+                  aria-hidden="true"
+                />
               </span>
               <span className="leading-tight">
                 <span className="block text-sm font-semibold tracking-tight">

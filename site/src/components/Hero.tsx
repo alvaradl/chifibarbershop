@@ -10,24 +10,29 @@ import { classNames } from '../utils/classNames'
  * @returns The hero section component.
  */
 export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }) {
-  const heroImage = siteData.gallery[0]?.src
   return (
     <section id="home" className="scroll-mt-28 pb-10 pt-2 sm:pb-14">
-      <div className="glass neon-ring relative overflow-hidden rounded-3xl bg-[#F5F1E8]">
-        <div className="absolute inset-0">
-          {heroImage ? (
-            <img
-              src={heroImage}
-              alt=""
-              className="h-full w-full object-cover opacity-20"
-              aria-hidden="true"
-            />
-          ) : null}
-          <div className="absolute inset-0 bg-blue-900/80" />
+      <div className="glass neon-ring relative overflow-hidden rounded-3xl border-2 border-blue-900/40 bg-[#F5F1E8] ring-2 ring-blue-900/30 ring-inset">
+        <div className="absolute inset-0 overflow-hidden rounded-3xl">
+          <img
+            src="/barber-pole-logo.png"
+            alt=""
+            className="h-full w-full object-cover object-center opacity-[0.32]"
+            style={{
+              objectPosition: 'center 5%',
+              filter:
+                'drop-shadow(-1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(-1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(0 0 4px rgba(30,58,138,0.35))',
+            }}
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-blue-900/75" />
         </div>
 
-        <div className="relative px-6 py-10 sm:px-10 sm:py-14">
-          <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+        <div className="relative px-6 py-8 sm:px-10 sm:py-12">
+          <div
+            aria-hidden="true"
+            className="absolute left-6 right-6 top-0 h-[380px] overflow-hidden rounded-2xl sm:left-10 sm:right-10 sm:h-[400px]"
+          >
             <div
               className={classNames(
                 'pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl',
@@ -39,13 +44,14 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
             />
           </div>
 
-          <div className="relative z-10 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div className="relative z-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-[#FF8C42]/20 px-3 py-1 text-[11px] font-semibold tracking-[0.22em] text-[#FF8C42] ring-1 ring-[#FF8C42]/30">
                 {siteData.hero.eyebrow}
                 <span className="h-1 w-1 rounded-full bg-[#FF8C42]/60" />
                 Minneapolis
               </div>
+
               <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-6xl text-white">
                 <span className="block">{siteData.hero.headlineTop}</span>
                 <span className="block text-accent">{siteData.hero.headlineBottom}</span>
@@ -76,26 +82,29 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
                   Get Directions
                 </a>
               </div>
+
+              <div className="mt-5 max-w-xl">
+                <div className="glass rounded-2xl p-5 bg-[#F5F1E8]">
+                  <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
+                    LOCATION
+                  </div>
+                  <div className="mt-2 text-sm font-semibold text-blue-900">
+                    {siteData.addressLine1}
+                  </div>
+                  <div className="text-sm text-muted">{siteData.addressLine2}</div>
+                  <a
+                    className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-900 ring-1 ring-blue-200 hover:bg-blue-200"
+                    href={siteData.mapsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open in Maps
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="grid gap-3">
-              <div className="glass rounded-2xl p-5 bg-[#F5F1E8]">
-                <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
-                  LOCATION
-                </div>
-                <div className="mt-2 text-sm font-semibold text-blue-900">
-                  {siteData.addressLine1}
-                </div>
-                <div className="text-sm text-muted">{siteData.addressLine2}</div>
-                <a
-                  className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-900 ring-1 ring-blue-200 hover:bg-blue-200"
-                  href={siteData.mapsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Open in Maps
-                </a>
-              </div>
               <div className="glass rounded-2xl p-5 bg-[#F5F1E8]">
                 <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
                   HOURS
