@@ -12,30 +12,89 @@ import { classNames } from '../utils/classNames'
 export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }) {
   return (
     <section id="home" className="scroll-mt-28 pb-10 pt-2 sm:pb-14">
-      <div className="glass neon-ring relative overflow-hidden rounded-3xl border-2 border-blue-900/40 bg-[#F5F1E8] ring-2 ring-blue-900/30 ring-inset">
+      <div className="glass neon-ring relative overflow-hidden rounded-3xl border-2 border-blue-900/40 bg-[#F5F1E8] ring-2 ring-blue-900/30 ring-inset min-h-[600px] sm:min-h-[700px]">
         <div className="absolute inset-0 overflow-hidden rounded-3xl">
+          {/* Barber pole - mobile */}
           <img
-            src="/barber-pole-logo.png"
+            src="/barber-pole-mobile.png"
             alt=""
-            className="h-full w-full object-cover object-center opacity-[0.32]"
+            className="absolute left-1/2 top-1/2 z-[-1] h-auto w-auto max-h-[600px] max-w-[600px] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[1] sm:hidden"
             style={{
-              objectPosition: 'center 5%',
               filter:
                 'drop-shadow(-1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(-1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(0 0 4px rgba(30,58,138,0.35))',
             }}
             aria-hidden="true"
           />
-          <div className="absolute inset-0 bg-blue-900/75" />
+          {/* Barber pole - desktop */}
+          <img
+            src="/barber-pole.png"
+            alt=""
+            className="absolute left-1/2 top-1/2 z-[-1] hidden h-auto w-auto max-h-[600px] max-w-[600px] -translate-x-1/2 -translate-y-1/2 object-contain opacity-[1] sm:block"
+            style={{
+              filter:
+                'drop-shadow(-1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(-1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(0 0 4px rgba(30,58,138,0.35))',
+            }}
+            aria-hidden="true"
+          />
+          {/* Barber blade - top-left corner */}
+          <img
+            src="/barber-blade.png"
+            alt=""
+            className="absolute left-0 top-0 z-[-1] h-auto w-auto max-h-40 max-w-40 sm:max-h-56 sm:max-w-56 object-contain opacity-[1]"
+            style={{
+              filter:
+                'drop-shadow(-1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(-1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(0 0 4px rgba(30,58,138,0.35))',
+            }}
+            aria-hidden="true"
+          />
+          {/* Barber clip - top-right corner */}
+          <img
+            src="/barber-clip.png"
+            alt=""
+            className="absolute right-0 top-0 z-[-1] h-auto w-auto max-h-40 max-w-40 sm:max-h-56 sm:max-w-56 object-contain opacity-[1]"
+            style={{
+              filter:
+                'drop-shadow(-1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(-1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(0 0 4px rgba(30,58,138,0.35))',
+            }}
+            aria-hidden="true"
+          />
+          {/* Barber clip - bottom-left corner */}
+          <img
+            src="/barber-clip.png"
+            alt=""
+            className="absolute bottom-0 left-0 z-[-1] h-auto w-auto max-h-40 max-w-40 sm:max-h-56 sm:max-w-56 object-contain opacity-[1]"
+            style={{
+              transform: 'rotate(180deg)',
+              transformOrigin: 'center',
+              filter:
+                'drop-shadow(-1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(-1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(0 0 4px rgba(30,58,138,0.35))',
+            }}
+            aria-hidden="true"
+          />
+          {/* Barber blade - bottom-right corner */}
+          <img
+            src="/barber-blade.png"
+            alt=""
+            className="absolute bottom-0 right-0 z-[-1] h-auto w-auto max-h-40 max-w-40 sm:max-h-56 sm:max-w-56 object-contain opacity-[.7]"
+            style={{
+              transform: 'rotate(180deg)',
+              transformOrigin: 'center',
+              filter:
+                'drop-shadow(-1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(1px -1px 0 rgba(30,58,138,0.5)) drop-shadow(-1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(1px 1px 0 rgba(30,58,138,0.5)) drop-shadow(0 0 4px rgba(30,58,138,0.35))',
+            }}
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-blue-900/90" />
         </div>
 
-        <div className="relative px-6 py-8 sm:px-10 sm:py-12">
+        <div className="relative z-10 px-6 py-8 sm:px-10 sm:py-12">
           <div
             aria-hidden="true"
-            className="absolute left-6 right-6 top-0 h-[380px] overflow-hidden rounded-2xl sm:left-10 sm:right-10 sm:h-[400px]"
+            className="absolute inset-0 overflow-hidden rounded-3xl"
           >
             <div
               className={classNames(
-                'pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl',
+                'pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full blur-3xl',
                 prefersReducedMotion ? 'opacity-40' : 'animate-pulse',
               )}
               style={{
@@ -44,7 +103,7 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
             />
           </div>
 
-          <div className="relative z-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div className="relative z-20 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-[#FF8C42]/20 px-3 py-1 text-[11px] font-semibold tracking-[0.22em] text-[#FF8C42] ring-1 ring-[#FF8C42]/30">
                 {siteData.hero.eyebrow}
@@ -84,7 +143,7 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
               </div>
 
               <div className="mt-5 max-w-xl">
-                <div className="glass rounded-2xl p-5 bg-[#F5F1E8]">
+                <div className="rounded-2xl p-5" style={{ backgroundColor: 'rgba(245, 241, 232, 0.85)' }}>
                   <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
                     LOCATION
                   </div>
@@ -105,7 +164,7 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
             </div>
 
             <div className="grid gap-3">
-              <div className="glass rounded-2xl p-5 bg-[#F5F1E8]">
+              <div className="rounded-2xl p-5" style={{ backgroundColor: 'rgba(245, 241, 232, 0.85)' }}>
                 <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
                   HOURS
                 </div>
@@ -122,7 +181,7 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
                 </div>
               </div>
 
-              <div className="glass rounded-2xl p-5 bg-[#F5F1E8]">
+              <div className="rounded-2xl p-5" style={{ backgroundColor: 'rgba(245, 241, 232, 0.85)' }}>
                 <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
                   SHOP INFO
                 </div>

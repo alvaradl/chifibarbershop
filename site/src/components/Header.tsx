@@ -49,7 +49,7 @@ export function Header({
             >
               <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-blue-50 p-1 ring-1 ring-blue-200">
                 <img
-                  src="/barber-pole-logo.png"
+                  src="/barber-pole.png"
                   alt=""
                   className="h-full w-full object-contain"
                   aria-hidden="true"
