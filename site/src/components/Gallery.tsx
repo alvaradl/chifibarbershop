@@ -10,7 +10,7 @@ import { Section } from './Section'
  */
 export function Gallery({ onImageClick }: { onImageClick: (imageIndex: number) => void }) {
   return (
-    <Section id="gallery" eyebrow="GALLERY" title="Recent cuts">
+    <Section id="gallery" eyebrow="GALLERY" title="Styles and Designs">
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {siteData.gallery.map((image, imageIndex) => (
           <button

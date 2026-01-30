@@ -8,53 +8,53 @@ import { Section } from './Section'
  */
 export function Services() {
   return (
-    <Section id="services" eyebrow="SERVICES" title="Barber services">
-      <div className="grid gap-6 lg:grid-cols-2 lg:items-start relative">
-        <div className="grid gap-4 sm:grid-cols-2 relative">
+    <Section id="services" eyebrow="GALLERY" title="Barber services">
+      <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch relative">
+        <div className="grid h-full min-h-0 gap-4 sm:grid-cols-2 relative">
           {siteData.services.map((service) => (
             <div
               key={service.title}
-              className="glass rounded-2xl p-5 bg-[#F5F1E8] transition hover:bg-blue-50 relative z-10"
+              className="glass rounded-2xl p-6 bg-[#F5F1E8] transition hover:bg-blue-50 relative z-10"
               style={{ opacity: 1, visibility: 'visible' }}
             >
               <div className="flex items-center justify-between">
-                <div className="text-base font-semibold text-blue-900">
+                <div className="text-lg font-semibold text-blue-900">
                   {service.title}
                 </div>
-                <div className="h-2 w-2 rounded-full bg-[#FF8C42] shadow-[0_0_12px_rgba(255,140,66,0.4)]" />
+                <div className="h-2.5 w-2.5 rounded-full bg-[#FF8C42] shadow-[0_0_12px_rgba(255,140,66,0.4)]" />
               </div>
-              <p className="mt-2 text-sm text-muted">{service.desc}</p>
+              <p className="mt-3 text-base text-muted">{service.desc}</p>
             </div>
           ))}
         </div>
 
         <div className="grid gap-4">
-          <div className="glass neon-ring rounded-2xl p-6 bg-[#F5F1E8] relative z-10" style={{ opacity: 1, visibility: 'visible' }}>
-            <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
+          <div className="glass neon-ring rounded-2xl p-7 bg-[#F5F1E8] relative z-10" style={{ opacity: 1, visibility: 'visible' }}>
+            <div className="text-sm font-semibold tracking-[0.22em] text-[#FF8C42]">
               SERVICES / PRICING
             </div>
-            <div className="mt-4 divide-y divide-white/10">
+            <div className="mt-5 divide-y divide-white/10">
               {siteData.serviceMenu.map((menuItem) => (
                 <div
                   key={menuItem.name}
-                  className="flex items-center justify-between gap-4 py-3"
+                  className="flex items-center justify-between gap-4 py-4"
                 >
-                  <div className="text-sm font-semibold">{menuItem.name}</div>
-                  <div className="text-sm text-blue-900/75">{menuItem.note}</div>
+                  <div className="text-base font-semibold">{menuItem.name}</div>
+                  <div className="text-base text-blue-900/75">{menuItem.note}</div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <div className="text-sm font-semibold text-blue-900">
+                <div className="text-base font-semibold text-blue-900">
                   Book an appointment
                 </div>
-                <div className="text-sm text-muted">Call and we'll get you scheduled.</div>
+                <div className="text-base text-muted">Call and we'll get you scheduled.</div>
               </div>
               <a
                 href={`tel:${siteData.phoneTel}`}
-                className="inline-flex items-center justify-center rounded-2xl bg-[#FF8C42] px-5 py-3 text-sm font-semibold text-black transition hover:bg-[#FFA366]"
+                className="inline-flex items-center justify-center rounded-2xl bg-[#FF8C42] px-5 py-3 text-base font-semibold text-black transition hover:bg-[#FFA366]"
               >
                 Call {siteData.phoneDisplay}
               </a>

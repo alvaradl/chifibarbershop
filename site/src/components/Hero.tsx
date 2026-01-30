@@ -11,7 +11,7 @@ import { classNames } from '../utils/classNames'
  */
 export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }) {
   return (
-    <section id="home" className="scroll-mt-28 pb-10 pt-2 sm:pb-14">
+    <section id="home" className="scroll-mt-28 pb-4 pt-2 sm:pb-6">
       <div className="glass neon-ring relative overflow-hidden rounded-3xl border-2 border-blue-900/40 bg-[#F5F1E8] ring-2 ring-blue-900/30 ring-inset">
         <div className="absolute inset-0 overflow-hidden rounded-3xl">
           {/* Barber pole - mobile */}
@@ -103,7 +103,7 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
             />
           </div>
 
-          <div className="relative z-20 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div className="relative z-20 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-[#FF8C42]/20 px-3 py-1 text-[11px] font-semibold tracking-[0.22em] text-[#FF8C42] ring-1 ring-[#FF8C42]/30">
                 {siteData.hero.eyebrow}

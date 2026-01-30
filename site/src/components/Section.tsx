@@ -22,12 +22,14 @@ export function Section({
   children: ReactNode
 }) {
   return (
-    <section id={id} className="scroll-mt-28 py-10 sm:py-14">
+    <section id={id} className="scroll-mt-28 py-2 sm:py-4">
       <div className="mb-6">
-        <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
-          {eyebrow}
-        </div>
-        <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl text-blue-900">
+        {eyebrow ? (
+          <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
+            {eyebrow}
+          </div>
+        ) : null}
+        <h2 className={eyebrow ? 'mt-2 text-2xl font-semibold tracking-tight sm:text-3xl text-blue-900' : 'text-2xl font-semibold tracking-tight sm:text-3xl text-blue-900'}>
           {title}
         </h2>
       </div>
