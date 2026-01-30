@@ -12,7 +12,7 @@ import { classNames } from '../utils/classNames'
 export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }) {
   return (
     <section id="home" className="scroll-mt-28 pb-10 pt-2 sm:pb-14">
-      <div className="glass neon-ring relative overflow-hidden rounded-3xl border-2 border-blue-900/40 bg-[#F5F1E8] ring-2 ring-blue-900/30 ring-inset min-h-[600px] sm:min-h-[700px]">
+      <div className="glass neon-ring relative overflow-hidden rounded-3xl border-2 border-blue-900/40 bg-[#F5F1E8] ring-2 ring-blue-900/30 ring-inset">
         <div className="absolute inset-0 overflow-hidden rounded-3xl">
           {/* Barber pole - mobile */}
           <img
@@ -87,7 +87,7 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
           <div className="absolute inset-0 bg-blue-900/90" />
         </div>
 
-        <div className="relative z-10 px-6 py-8 sm:px-10 sm:py-12">
+        <div className="relative z-10 px-6 pt-8 pb-6 sm:px-10 sm:pt-12 sm:pb-8">
           <div
             aria-hidden="true"
             className="absolute inset-0 overflow-hidden rounded-3xl"

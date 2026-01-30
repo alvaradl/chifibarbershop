@@ -9,12 +9,13 @@ import { Section } from './Section'
 export function Services() {
   return (
     <Section id="services" eyebrow="SERVICES" title="Barber services">
-      <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-        <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2 lg:items-start relative">
+        <div className="grid gap-4 sm:grid-cols-2 relative">
           {siteData.services.map((service) => (
             <div
               key={service.title}
-              className="glass rounded-2xl p-5 bg-[#F5F1E8] transition hover:bg-blue-50"
+              className="glass rounded-2xl p-5 bg-[#F5F1E8] transition hover:bg-blue-50 relative z-10"
+              style={{ opacity: 1, visibility: 'visible' }}
             >
               <div className="flex items-center justify-between">
                 <div className="text-base font-semibold text-blue-900">
@@ -28,7 +29,7 @@ export function Services() {
         </div>
 
         <div className="grid gap-4">
-          <div className="glass neon-ring rounded-2xl p-6 bg-[#F5F1E8]">
+          <div className="glass neon-ring rounded-2xl p-6 bg-[#F5F1E8] relative z-10" style={{ opacity: 1, visibility: 'visible' }}>
             <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
               SERVICES / PRICING
             </div>
