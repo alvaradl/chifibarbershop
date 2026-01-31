@@ -29,7 +29,7 @@ export const siteData = {
   services: [
     {
       title: "Haircuts",
-      desc: "Classic cuts to modern fades, tailored to your face and style.",
+      desc: "Low fade, drop fade, taper fade, undercut, and textured crop. Any style you want, we'll get you right.",
     },
     { title: "Beard", desc: "Beard trims, shaping, and clean-ups." },
     { title: "Line Ups", desc: "Crisp edges with precision detailing." },
