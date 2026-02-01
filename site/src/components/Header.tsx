@@ -23,9 +23,9 @@ export function Header({
 
   const navigationLinks = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
     { id: 'services', label: 'Services' },
     { id: 'gallery', label: 'Gallery' },
+    { id: 'about', label: 'About' },
     { id: 'contact', label: 'Location / Contact' },
   ] as const
 

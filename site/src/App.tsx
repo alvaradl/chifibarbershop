@@ -123,9 +123,9 @@ function App() {
 
       <main id="main" className="mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-6">
         <Hero prefersReducedMotion={prefersReducedMotion} />
-        <About />
         <Services />
         <Gallery onImageClick={setLightboxImageIndex} />
+        <About />
         <Contact />
       </main>
 

@@ -13,9 +13,7 @@ export function About() {
       <div className="grid gap-6 lg:grid-cols-1">
         <div className="glass neon-ring w-full rounded-2xl p-5 bg-[#F5F1E8] sm:p-6">
           <p className="text-muted">
-            {siteData.owner} focuses on details: clean blends, sharp lines, and a finish
-            that holds up days later. Whether you want a classic look or something modern,
-            you'll leave fresh.
+            {siteData.about}
           </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2 sm:gap-3">
             <Feature title="Precision" desc="Crisp edges & clean fades." />

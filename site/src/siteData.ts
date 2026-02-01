@@ -16,6 +16,8 @@ export const siteData = {
     subhead:
       "Sharp fades, clean line-ups, and beard work done right. Call to book fast or walk in when available.",
   },
+  about:
+    "Hello my name is Carlos but most of you guys might know me as Chify. I care about the details so you leave looking sharp and feeling good. I provide clean blends, crisp lines and a cut that still looks fresh days later. Whether you're after something classic or something new, you're in the right place. Come through.",
   shopHighlights: [
     { title: "Appointments Available", desc: "Call to schedule quickly." },
     { title: "Walk-Ins Welcome", desc: "When spots are open." },
