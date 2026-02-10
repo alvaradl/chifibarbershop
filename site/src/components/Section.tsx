@@ -25,11 +25,11 @@ export function Section({
     <section id={id} className="scroll-mt-28 py-2 sm:py-4">
       <div className="mb-6">
         {eyebrow ? (
-          <div className="text-xs font-semibold tracking-[0.22em] text-[#FF8C42]">
+          <div className="text-xs font-semibold tracking-[0.22em] text-[#EF4444]">
             {eyebrow}
           </div>
         ) : null}
-        <h2 className={eyebrow ? 'mt-2 text-2xl font-semibold tracking-tight sm:text-3xl text-blue-900' : 'text-2xl font-semibold tracking-tight sm:text-3xl text-blue-900'}>
+        <h2 className={eyebrow ? 'mt-2 text-2xl font-semibold tracking-tight sm:text-3xl text-[#3D3559]' : 'text-2xl font-semibold tracking-tight sm:text-3xl text-[#3D3559]'}>
           {title}
         </h2>
       </div>

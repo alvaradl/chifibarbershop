@@ -39,15 +39,15 @@ export function Header({
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="glass neon-ring mt-3 rounded-2xl bg-[#F5F1E8]">
+        <div className="glass neon-ring mt-3 rounded-2xl bg-white">
           <div className="flex items-center justify-between px-4 py-3">
             <button
               type="button"
               onClick={() => scrollToSection('home', prefersReducedMotion)}
-              className="group flex items-center gap-2 rounded-xl px-2 py-1 text-left focus:outline-none focus:ring-2 focus:ring-[#FF8C42]/70"
+              className="group flex items-center gap-2 rounded-xl px-2 py-1 text-left focus:outline-none focus:ring-2 focus:ring-[#EF4444]/70"
               aria-label={`${siteData.name} — go to top`}
             >
-              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-blue-50 p-1 ring-1 ring-blue-200">
+              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1 ring-1 ring-[#06B6D4]/30">
                 <img
                   src="/barber-pole.png"
                   alt=""
@@ -71,10 +71,10 @@ export function Header({
                   onClick={() => scrollToSection(link.id, prefersReducedMotion)}
                   className={classNames(
                     'rounded-xl px-3 py-2 text-sm font-medium transition',
-                    'hover:bg-blue-50 hover:ring-1 hover:ring-blue-200',
+                    'hover:bg-gray-50 hover:ring-1 hover:ring-[#06B6D4]/30',
                     activeSectionId === link.id
-                      ? 'bg-blue-50 ring-1 ring-[#FF8C42]/40 text-[#FF8C42]'
-                      : 'text-blue-900/85',
+                      ? 'bg-gray-50 ring-1 ring-[#EF4444]/40 text-[#EF4444]'
+                      : 'text-[#3D3559]/85',
                   )}
                 >
                   {link.label}
@@ -82,7 +82,7 @@ export function Header({
               ))}
               <a
                 href={`tel:${siteData.phoneTel}`}
-                className="ml-1 inline-flex items-center gap-2 rounded-xl bg-[#FF8C42] px-3 py-2 text-sm font-semibold text-black transition hover:bg-[#FFA366] focus:outline-none focus:ring-2 focus:ring-[#FF8C42]/70"
+                className="ml-1 inline-flex items-center gap-2 rounded-xl bg-[#EF4444] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#F87171] focus:outline-none focus:ring-2 focus:ring-[#EF4444]/70"
                 aria-label={`Book appointment by calling ${siteData.phoneDisplay}`}
               >
                 Book (Call)
@@ -92,7 +92,7 @@ export function Header({
 
             <button
               type="button"
-              className="md:hidden rounded-xl px-3 py-2 text-sm font-semibold ring-1 ring-blue-200 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-[#FF8C42]/70"
+              className="md:hidden rounded-xl px-3 py-2 text-sm font-semibold ring-1 ring-[#06B6D4]/30 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#EF4444]/70"
               onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-nav"
@@ -104,7 +104,7 @@ export function Header({
           <div
             id="mobile-nav"
             className={classNames(
-              'border-t border-blue-200 px-3 pb-3 md:hidden bg-[#F5F1E8]',
+              'border-t border-[#06B6D4]/30 px-3 pb-3 md:hidden bg-white',
               isMobileMenuOpen ? 'block' : 'hidden',
             )}
           >
@@ -120,8 +120,8 @@ export function Header({
                   className={classNames(
                     'rounded-xl px-3 py-2 text-left text-sm font-semibold transition',
                     activeSectionId === link.id
-                      ? 'bg-blue-50 text-[#FF8C42]'
-                      : 'hover:bg-blue-50',
+                      ? 'bg-gray-50 text-[#EF4444]'
+                      : 'hover:bg-gray-50',
                   )}
                 >
                   {link.label}
@@ -129,7 +129,7 @@ export function Header({
               ))}
               <a
                 href={`tel:${siteData.phoneTel}`}
-                className="mt-1 rounded-xl bg-[#FF8C42] px-3 py-2 text-sm font-semibold text-black transition hover:bg-[#FFA366]"
+                className="mt-1 rounded-xl bg-[#EF4444] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#F87171]"
               >
                 Book Appointment (Call) — {siteData.phoneDisplay}
               </a>

@@ -11,7 +11,7 @@ export function About() {
   return (
     <Section id="about" eyebrow="ABOUT" title="Built for consistency. Styled for confidence.">
       <div className="grid gap-6 lg:grid-cols-1">
-        <div className="glass neon-ring w-full rounded-2xl p-5 bg-[#F5F1E8] sm:p-6">
+        <div className="glass neon-ring w-full rounded-2xl p-5 bg-white sm:p-6">
           <p className="text-muted">
             {siteData.about}
           </p>

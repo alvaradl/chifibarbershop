@@ -16,7 +16,7 @@ export function Gallery({ onImageClick }: { onImageClick: (imageIndex: number) =
           <button
             key={image.src}
             type="button"
-            className="group relative block w-full overflow-hidden rounded-2xl bg-[#F5F1E8] p-0 focus:outline-none focus:ring-2 focus:ring-[#FF8C42]/70"
+            className="group relative block w-full overflow-hidden rounded-2xl bg-white p-0 focus:outline-none focus:ring-2 focus:ring-[#EF4444]/70"
             onClick={() => onImageClick(imageIndex)}
             aria-label={`Open gallery image ${imageIndex + 1}`}
           >
@@ -27,8 +27,8 @@ export function Gallery({ onImageClick }: { onImageClick: (imageIndex: number) =
                 loading="lazy"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]"
               />
-              <div className="pointer-events-none absolute inset-0 bg-blue-900/30" />
-              <div className="pointer-events-none absolute bottom-3 left-3 z-10 rounded-full bg-[#FF8C42]/90 px-3 py-1 text-xs font-semibold text-black ring-1 ring-[#FF8C42]">
+              <div className="pointer-events-none absolute inset-0 bg-[#3D3559]/30" />
+              <div className="pointer-events-none absolute bottom-3 left-3 z-10 rounded-full bg-[#EF4444]/90 px-3 py-1 text-xs font-semibold text-white ring-1 ring-[#EF4444]">
                 Tap to enlarge
               </div>
             </div>

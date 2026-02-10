@@ -114,7 +114,7 @@ function App() {
   }, [lightboxImageIndex])
 
   return (
-    <div className="min-h-screen text-blue-900">
+    <div className="min-h-screen text-[#3D3559]">
       <SkipLink />
       <Header
         activeSectionId={activeSectionId}

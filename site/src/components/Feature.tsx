@@ -8,8 +8,8 @@
  */
 export function Feature({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="rounded-2xl bg-blue-50 p-4 ring-1 ring-blue-200">
-      <div className="text-sm font-semibold text-blue-900">{title}</div>
+    <div className="rounded-2xl bg-white p-4 ring-1 ring-[#06B6D4]/30">
+      <div className="text-sm font-semibold text-[#3D3559]">{title}</div>
       <div className="mt-1 text-sm text-muted">{desc}</div>
     </div>
   )
