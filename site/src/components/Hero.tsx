@@ -105,15 +105,21 @@ export function Hero({ prefersReducedMotion }: { prefersReducedMotion: boolean }
 
           <div className="relative z-20 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#EF4444]/20 px-3 py-1 text-[11px] font-semibold tracking-[0.22em] text-[#EF4444] ring-1 ring-[#EF4444]/30">
+              <div className="inline-flex items-center gap-2 rounded-full bg-black/90 px-3 py-1 text-[11px] font-semibold tracking-[0.22em] text-white ring-1 ring-black/70">
                 {siteData.hero.eyebrow}
-                <span className="h-1 w-1 rounded-full bg-[#EF4444]/60" />
+                <span className="h-1 w-1 rounded-full bg-white/80" />
                 Minneapolis
               </div>
 
-              <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-6xl text-white">
+              <h1
+                className="mt-5 text-center text-4xl font-semibold tracking-tight text-black sm:text-6xl"
+                style={{
+                  WebkitTextStroke: '3px white',
+                  textStroke: '3px white',
+                }}
+              >
                 <span className="block">{siteData.hero.headlineTop}</span>
-                <span className="block text-accent">{siteData.hero.headlineBottom}</span>
+                <span className="block">{siteData.hero.headlineBottom}</span>
               </h1>
               <p className="mt-4 max-w-2xl text-base text-white/90 sm:text-lg">
                 {siteData.hero.subhead}
